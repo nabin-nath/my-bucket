@@ -70,12 +70,13 @@ body {
 header{
   display: flex;
   background-color: #263859;
-  padding: 1rem;
+  padding: 10px 40px;
   justify-content:space-between;
 }
 
 .search{
-  border: 2px solid #17223b;
+  margin-top: 30px;
+  border: 2px solid #ffffff;
   background-color: transparent;
   color: aliceblue;
   padding: 0.5rem 1.5rem;
@@ -109,4 +110,20 @@ color: rgb(9, 243, 9);
 
 .textcenter{
   text-align: center;
+}
+
+.navbar {
+ display: flex;
+ list-style-type: none;
+ justify-content: space-around;
+ padding-top: 10px;
+}
+
+.li{
+  padding: 0 15px;
+}
+
+.li a{
+  text-decoration: none;
+  color: white;
 }

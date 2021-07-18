@@ -67,17 +67,18 @@ function Home() {
 
     return (
         <div>
-            <form onSubmit={searchData}>
+            {/* <form onSubmit={searchData}>
                 <header>
                     <h2>Moive Database</h2>
                     <input onChange={search} className="search" type="text" placeholder="Search..." value={searchTerm}></input>
                 </header>
                 {error && <h1 className={"textcenter"}>{error}</h1>}
                 {ispending && <Loading />}
-            </form>
+            </form> */}
+            {ispending && <Loading />}
             <div className="App">
                 {console.log(movies)}
-                {movies.length > 0 && movies.map((data) => <Movie key={data.id} {...data} />)}
+                {movies.length > 0 && movies.map((data, index) => <Movie key={data.id} {...data} home={true} index={index} />)}
             </div>
         </div>
     );
