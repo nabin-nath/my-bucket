@@ -12,13 +12,9 @@ function Home() {
     const MOVIE_API_3 = "https://api.themoviedb.org/3/discover/movie?sort_by_popularity.desc&api_key=d0c3afe69acdc83100011b973dc1865b&page=4";
     const MOVIE_API_4 = "https://api.themoviedb.org/3/discover/movie?sort_by_popularity.desc&api_key=d0c3afe69acdc83100011b973dc1865b&page=5";
 
-
-    const MOVIE_SEARCH = "https://api.themoviedb.org/3/search/movie?&api_key=d0c3afe69acdc83100011b973dc1865b&query=";
-
     const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
     const [ispending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
+    // const [error, setError] = useState(null);
 
     const getMovies = (API) => {
         fetch(API)
@@ -31,12 +27,12 @@ function Home() {
             .then((data) => {
                 setMovies(prevVal => [...prevVal, ...data.results]);
                 setIsPending(false);
-                setError(null);
+                // setError(null);
 
             })
             .catch(err => {
                 setIsPending(false);
-                setError(err.message);
+                // setError(err.message);
             });
 
     }
@@ -48,22 +44,6 @@ function Home() {
         getMovies(MOVIE_API_3)
         getMovies(MOVIE_API_4)
     }, []);
-
-    function search(e) {
-        setSearchTerm(e.target.value);
-    }
-
-    function searchData(e) {
-
-        e.preventDefault();
-        if (searchTerm) {
-
-            setIsPending(true);
-            setMovies([]);
-            // console.log("here am i");
-            getMovies(MOVIE_SEARCH + searchTerm);
-        }
-    }
 
     return (
         <div>

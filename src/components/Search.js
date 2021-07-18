@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import Loading from './Loading';
 import Movie from './Movie';
 
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [ispending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [movies, setMovies] = useState([]);
 
@@ -22,11 +20,11 @@ export default function Search() {
             })
             .then((data) => {
                 setMovies(data.results);
-                setIsPending(false);
+
                 setError(null);
             })
             .catch(err => {
-                setIsPending(false);
+
                 setError(err.message);
             });
 
@@ -41,7 +39,7 @@ export default function Search() {
         e.preventDefault();
         if (searchTerm) {
 
-            setIsPending(true);
+
             setMovies([]);
             // console.log("here am i");
             getMovies(MOVIE_SEARCH + searchTerm);
