@@ -8,6 +8,6 @@
 - The bucket list is stored in local storage of the website and does not goes away after refresing the site.
 
 ## Images
-![Image of HomePage](./public/screenshots/home.png)
-![Image of SeacchPage](./public/screenshots/search.png)
-![Image of Bucket](./public/screenshots/bucket.png)
+![bucket](https://user-images.githubusercontent.com/55244069/129951358-e780831f-5bcb-4517-b01b-04a50d7d6189.png)
+![home](https://user-images.githubusercontent.com/55244069/129951393-c7a77be2-705d-43f7-8ae7-93483d3df969.png)
+![search](https://user-images.githubusercontent.com/55244069/129951427-f4907a5d-f069-4c55-a72d-298f6bfcde9c.png)
