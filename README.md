@@ -4,8 +4,8 @@
 
 ## About
 - My bucket is a movie database app which shows top rated movies.
-- You can create a bucket list from these movies.
-- The bucket list is stored in local storage of the website and does not goes away after refresing the site.
+- Users can create a bucket list from these movies.
+- The bucket list is stored in local storage of the website and does not goes away after refreshing the site.
 
 ## Images
 ![bucket](https://user-images.githubusercontent.com/55244069/129951358-e780831f-5bcb-4517-b01b-04a50d7d6189.png)
